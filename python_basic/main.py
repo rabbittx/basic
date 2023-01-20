@@ -26,16 +26,23 @@ def find_bmm():
     min_num = min(first_number,second_number)
     max_num = max(first_number,second_number)
     bmm = 0
+
     for i in range(max_num):
-        if max_num%min_num == 0 :
-            bmm = min_num
-            break 
-        elif max_num%min_num != 0:
-            bmm = max_num%min_num
-            max_num = min_num
-            min_num = bmm
-            if bmm % min_num == 0 :
-                break
+        bmm = min_num if max_num % min_num == 0 else max_num % min_num
+        max_num , min_num = min_num , bmm
+        if bmm % min_num == 0 :
+            break
+
+        # if max_num%min_num == 0 :
+        #     bmm = min_num
+        #     break 
+        # elif max_num%min_num != 0:
+        #     bmm = max_num%min_num
+        #     max_num = min_num
+        #     min_num = bmm
+        #     if bmm % min_num == 0 :
+        #         break
+
     print(f'BMM of [{first_number}]-[{second_number}] : is {bmm}')
 
             # all works 
