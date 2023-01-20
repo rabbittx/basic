@@ -31,7 +31,7 @@ if max_num % min_num == 0 :
 else:
      m = max_num % min_num
      
-	
+	# this is just for test 
 if result == None:
 	print("The Numbr <1>")
 else:
