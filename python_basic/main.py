@@ -25,11 +25,10 @@ def find_bmm():
     second_number = int(input('enter second number :'))
     min_num = min(first_number,second_number)
     max_num = max(first_number,second_number)
-    bmm = 0
 
-    for i in range(max_num):
+    for i in range(min_num):
         bmm = min_num if max_num % min_num == 0 else max_num % min_num
-        max_num , min_num = min_num , bmm
+        max_num , min_num = min_num , bmm 
         if bmm % min_num == 0 :
             break
 
@@ -45,5 +44,3 @@ def find_bmm():
 
     print(f'BMM of [{first_number}]-[{second_number}] : is {bmm}')
 
-            # all works 
-find_bmm()
