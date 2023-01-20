@@ -18,23 +18,3 @@ def calculator_BMI():
         print("You are obese.")
 
 #-------------------------------------------------------------------------------------
-# a: الگوریتم محاسبه ب.م.م : بزرگترین مقسوم علیه ( شمارنده ) مشترک 
-# (num1 , num2 ) 
-num1:int = int( input("Enter number 1 of (num1 , num2): ") )
-num2:int = int( input("Enter number 2 of (num1 , num2): ") )
-
-max_num = max(num1 , num2)  # iter in (num1 , num2 )
-min_num = min(num1 , num2)
-bmm = 0
-if max_num % min_num == 0 :
-     bmm = min_num
-else:
-     m = max_num % min_num
-     
-	# this is just for test 
-if result == None:
-	print("The Numbr <1>")
-else:
-	print( f"The Number is <{result}>")
-
-# new main test
