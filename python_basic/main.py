@@ -17,9 +17,10 @@ def calculator_BMI():
     else:
         print("You are obese.")
 
-#Simple two numbers BMM calculator using python -------------------------------------------------------------------------------------
+#Simple two number BMM calculator using python -------------------------------------------------------------------------------------
 
 def find_bmm():
+    # find bmm of 2 number
     first_number = int(input('enter first number :'))
     second_number = int(input('enter second number :'))
     min_num = min(first_number,second_number)
