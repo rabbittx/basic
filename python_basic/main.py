@@ -17,6 +17,9 @@ def calculator_BMI():
     else:
         print("You are obese.")
 
+# calculator_BMI()
+
+
 #Simple two number BMM calculator using python -------------------------------------------------------------------------------------
 
 def find_bmm():
@@ -44,3 +47,4 @@ def find_bmm():
 
     print(f'BMM of [{first_number}]-[{second_number}] : is {bmm}')
 
+find_bmm()
