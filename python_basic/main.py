@@ -47,4 +47,23 @@ def find_bmm():
 
     print(f'BMM of [{first_number}]-[{second_number}] : is {bmm}')
 
-find_bmm()
+
+#Simple Graph Plotting in Python -------------------------------------------------------------------------------------
+from random import randint
+dice = [0,0,0,0,0,0]
+for i in range(10000):
+    dice_roll  = randint(1,6)
+    if dice_roll == 1 :
+        dice[0] +=1
+    elif dice_roll == 2 :
+        dice[1] +=1
+    elif dice_roll == 3 :
+        dice[2] +=1
+    elif dice_roll == 4 :
+        dice[3] +=1
+    elif dice_roll == 5 :
+        dice[4] +=1
+    elif dice_roll == 6 :
+        dice[5] +=1
+
+print(dice)
