@@ -54,44 +54,17 @@ import random
 
 def roll_dice():
     # random.seed(23*99-6%60) get random 4 -.-
-    dice = random.randint(1,6)
-    return dice
+    return random.randint(1,6)
 
-dice_list = [0,0,0,0,0,0]
-for i in range(10000):
-    dice  = roll_dice()
-    # print(dice)
-    if dice == 1 :
-        dice_list[0] +=1
-    elif dice == 2 :
-        dice_list[1] +=1
-    elif dice == 3 :
-        dice_list[2] +=1
-    elif dice == 4 :
-        dice_list[3] +=1
-    elif dice == 5 :
-        dice_list[4] +=1
-    elif dice == 6 :
-        dice_list[5] +=1
 
 import numpy as np
 import pandas as pd
 from matplotlib.pyplot import plot
-# output_notebook() # uncomment this for use in a notebook
 
-SIZES = (10, 50, 100, 500, 1000, 5000, 10000, 50000)
-BINS = np.arange(14) - 0.5
-random.seed(5864218/8*236)
-def roll():
-    return random.randint(1,6)
-
-roll_dice_number = 0
-import numpy as np
-import matplotlib.pyplot as plt
 dice_dic = {1:0,2:0,3:0,4:0,5:0,6:0}
 # creating the dataset
 for i in range(10000):
-    data = roll()
+    data = roll_dice()
     if data == 1 :
         dice_dic[1] +=1
     elif data == 2 :
@@ -107,9 +80,7 @@ for i in range(10000):
 
 
 print(dice_dic)
-import numpy as np
-
-import matplotlib.pyplot as plt
 
 
-plt.show()
+
+plot.show()
