@@ -62,11 +62,9 @@ def roll(n,dic_side_number):
     dice_dic ={}
     for side in range(dic_side_number):
         dice_dic[side+1] = 0
-    # dice_dic = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
     # creating the dataset
     # is there any one line for to fill it ?
     for i in range(n): dice_dic[roll_dice()] += 1
-    print(dice_dic)
     return dice_dic
 
 def plot_data(dic,y_label,x_lable):
