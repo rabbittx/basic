@@ -53,7 +53,7 @@ def find_bmm():
 
 
 
-def roll(n,dic_side_number):
+def roll(roll_number,dic_side_number):
     def roll_dice():
         import random
         random.seed()
@@ -64,7 +64,7 @@ def roll(n,dic_side_number):
         dice_dic[side+1] = 0
     # creating the dataset
     # is there any one line for to fill it ?
-    for i in range(n): dice_dic[roll_dice()] += 1
+    for i in range(roll_number): dice_dic[roll_dice()] += 1
     return dice_dic
 
 def plot_data(dic,y_label,x_lable):
