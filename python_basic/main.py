@@ -50,37 +50,42 @@ def find_bmm():
 
 #Simple Graph Plotting in Python -------------------------------------------------------------------------------------
 
-import random 
-
-def roll_dice():
-    # random.seed(23*99-6%60) get random 4 -.-
-    return random.randint(1,6)
-
-
-import numpy as np
-import pandas as pd
-from matplotlib.pyplot import plot
-
-dice_dic = {1:0,2:0,3:0,4:0,5:0,6:0}
-# creating the dataset
-for i in range(10000):
-    data = roll_dice()
-    if data == 1 :
-        dice_dic[1] +=1
-    elif data == 2 :
-        dice_dic[2] +=1
-    elif data == 3 :
-        dice_dic[3] +=1
-    elif data == 4 :
-        dice_dic[4] +=1
-    elif data == 5 :
-        dice_dic[5] +=1
-    elif data == 6 :
-        dice_dic[6] +=1
-
-
-print(dice_dic)
 
 
 
-plot.show()
+def roll(n,dic_side_number):
+    def roll_dice():
+        import random
+        random.seed()
+        # random.seed(23*99-6%60) get random 4 -.-
+        return random.randint(1, dic_side_number)
+    dice_dic ={}
+    for side in range(dic_side_number):
+        dice_dic[side+1] = 0
+    # dice_dic = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    # creating the dataset
+    # is there any one line for to fill it ?
+    for i in range(n): dice_dic[roll_dice()] += 1
+    print(dice_dic)
+    return dice_dic
+
+def plot_data(dic,y_label,x_lable):
+    import matplotlib.pyplot as plt
+    plt.rcdefaults()
+    import numpy as np
+    import matplotlib.pyplot as plt
+    objects = dic.keys()
+    performance = dic.values()
+    y_pos = np.arange(len(objects))
+    plt.bar(y_pos, performance, align='center', alpha=0.5)
+    plt.xticks(y_pos, objects)
+    plt.ylabel(y_label)
+    plt.title(x_lable)
+    plt.show()
+
+
+def dice_plot(roll_number,dice_side):
+    data = roll(roll_number,dice_side)
+    plot_data(data,y_label='rolls',x_lable='dice_number')
+
+dice_plot(549,9)
